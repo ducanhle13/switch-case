@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch-case</title>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="Nhập số tháng" id="id_thang">
+    <input type="button" value="Tính số ngày" id="id_ngay" onclick="ngay()">
+
+</form>
+<script>
+    function ngay(){
+        let day1=parseInt(document.getElementById('id_thang').value);
+        switch(day1){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:{
+                alert("tháng " + day1 + " có 31 ngày");
+                break;
+            }
+            case 4:
+            case 6:
+            case 9:
+            case 11:{
+                alert("tháng " + day1 + " có 30 ngày");
+                break;
+            }
+            case 2:
+                alert("tháng " + day1 + " có 28 ngày hoặc 29 ngày");
+                break;
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
